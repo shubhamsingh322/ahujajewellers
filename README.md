@@ -1,1 +1,1 @@
-# ahujajewellers
+# Ahuja-jewellers

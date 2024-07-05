@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahuja Jewellers</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @media (max-width: 699px) {
+    .section-1 {
+        height: 0vh;
+    }
+
+    .full-img{
+    width:100%;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.9);
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+  }
+  
+  .full-img img{
+  width:90%;  
+  max-width:400px;
+  }
+  
+  .full-img span{
+    position:absolute;
+    top:15%;
+    right:5%;
+    font-size:30px;
+    color:#fff;
+    cursor: pointer;
+  }
+}  
+    </style>
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <div id="purple"></div>
+
+    <div class="main">
+      <div class="slider">
+        <ul class="mobile-navbar d-flex-c">
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link active" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="#">About</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="#">Silver</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="#">Gold</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="#">Diamond</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-1 d-flex-c">
+        <div class="header-part d-flex">
+          <nav class="d-flex">
+            <div class="logo d-flex">
+              <img src="./Assets/Img/main-logo.png" alt="" />
+            </div>
+            <div class="nav-link d-flex">
+              <a href="">Home</a>
+              <a href="">About</a>
+              <a href="">Silver</a>
+              <a href="">Gold</a>
+              <a href="">Diamond</a>
+            </div>
+            <div class="rght-nav d-flex">
+              <button type="button" href="" class="cta-btn">Contact Us</button>
+            </div>
+            <div class="mobile-nav-btn d-flex">
+              <i id="mobile-nav-open" class="ri-menu-3-line" name="open"></i>
+              <i id="mobile-nav-close" class="ri-close-line" name="close"></i>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="full-img" id="fullimgbox">
+        <img src="img/img1.jpg" alt="" id="fullimg">
+        <span onclick="closefullimg()">X</span>
+    </div>
+    <div class="img-gallery">
+     <img src="img/img1.jpg" alt="" onclick="openfullimg(this.src)">   
+     <img src="img/img2.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img3.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img4.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img4.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img5.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img6.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img7.jpg" alt="" onclick="openfullimg(this.src)"> 
+     <img src="img/img8.jpg" alt="" onclick="openfullimg(this.src)"> 
+
+    </div>
+
+      <!----Footer-->
+      <div class="footer d-flex-c">
+        <img src="Assets/Img/main-logo.png" class="img-fluid" alt="" />
+        <p>Elevating every movement with existing diamonds</p>
+        <div class="icons">
+          <a
+            href="https://www.instagram.com/ahujajewellers/?hl=en"
+            target="_blank"
+            ><img
+              src="./Assets/Img/instagram.svg"
+              class="img-fluid"
+              alt="Instagram"
+          /></a>
+          <a href="https://www.facebook.com/ahujajewellers" target="_blank"
+            ><img
+              src="./Assets/Img/facebook.svg"
+              class="img-fluid"
+              alt="Facebook"
+          /></a>
+          <a href="https://www.youtube.com/@ahujajewellers_" target="_blank"
+            ><img
+              src="./Assets/Img/youtube.svg"
+              class="img-fluid"
+              alt="Youtube"
+          /></a>
+        </div>
+      </div>
+
+      <!----Footer-end section-->
+      <div class="footer-end d-flex-c">
+        <h2>@2024 All Rights Reserved. Designed by The Brandviser</h2>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+
+    <script>
+
+        var fullimgbox = document.getElementById("fullimgbox");
+        var fullimg = document.getElementById("fullimg");
+        function openfullimg(pic){
+           fullimgbox.style.display ="flex"; 
+           fullimg.src = pic;
+        }
+        
+        function closefullimg(){
+            fullimgbox.style.display ="none";   
+        }
+        
+        
+            </script>
+  </body>
+</html>
